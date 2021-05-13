@@ -1,0 +1,31 @@
+var postSecData = {
+"type": "FeatureCollection",
+"name": "postSecData",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "CENTENNIAL COLLEGE - ASHTONBEE CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.289786729638806, 43.730701378308098 ] } },
+{ "type": "Feature", "properties": { "name": "CENTENNIAL COLLEGE - CARLAW CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.348860605308801, 43.684651262071398 ] } },
+{ "type": "Feature", "properties": { "name": "CENTENNIAL COLLEGE - DOWNSVIEW CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.476193697020904, 43.747382384626199 ] } },
+{ "type": "Feature", "properties": { "name": "CENTENNIAL COLLEGE - MIDLAND CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.265655745264496, 43.752295898861597 ] } },
+{ "type": "Feature", "properties": { "name": "CENTENNIAL COLLEGE - MORNINGSIDE CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.192933161285694, 43.786023931075498 ] } },
+{ "type": "Feature", "properties": { "name": "CENTENNIAL COLLEGE - PROGRESS CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.2270264219067, 43.785264660547803 ] } },
+{ "type": "Feature", "properties": { "name": "GEORGE BROWN COLLEGE - CASA LOMA CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.411045415914998, 43.676012343115502 ] } },
+{ "type": "Feature", "properties": { "name": "GEORGE BROWN COLLEGE - ST JAMES CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.370185649498097, 43.651100464218999 ] } },
+{ "type": "Feature", "properties": { "name": "GEORGE BROWN COLLEGE - WATERFRONT CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.365469492591998, 43.643938782449098 ] } },
+{ "type": "Feature", "properties": { "name": "GEORGE BROWN COLLEGE - YOUNG CENTRE FOR THE PERFORMING ARTS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.357458675326995, 43.650850925833304 ] } },
+{ "type": "Feature", "properties": { "name": "HUMBER COLLEGE - LAKESHORE CAMPUS WEST", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.520303925739299, 43.596996813343999 ] } },
+{ "type": "Feature", "properties": { "name": "HUMBER COLLEGE - NORTH CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.60683986273861, 43.729166549249904 ] } },
+{ "type": "Feature", "properties": { "name": "HUMBER COLLEGE - POWER BOATING AND SAILING", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.481084535518605, 43.618778861115999 ] } },
+{ "type": "Feature", "properties": { "name": "HUMBER COLLEGE - UNIVERSITY OF GUELPH BUILDING", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.605872027109996, 43.728202085158003 ] } },
+{ "type": "Feature", "properties": { "name": "OCAD UNIVERSITY - MAIN BUILDING", "type": "University" }, "geometry": { "type": "Point", "coordinates": [ -79.391204979385819, 43.653003369721603 ] } },
+{ "type": "Feature", "properties": { "name": "RYERSON UNIVERSITY - MAIN ADDRESS", "type": "University" }, "geometry": { "type": "Point", "coordinates": [ -79.380479826029202, 43.657765635465601 ] } },
+{ "type": "Feature", "properties": { "name": "SENECA COLLEGE - NEWNHAM CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.348987644264099, 43.795780807635801 ] } },
+{ "type": "Feature", "properties": { "name": "SENECA COLLEGE - SENECA AT YORK CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.498854278760007, 43.771274895976603 ] } },
+{ "type": "Feature", "properties": { "name": "SENECA COLLEGE - YORKGATE CAMPUS", "type": "College" }, "geometry": { "type": "Point", "coordinates": [ -79.519439349330895, 43.758498548546001 ] } },
+{ "type": "Feature", "properties": { "name": "UNIVERSITY OF GUELPH, HUMBER COLLEGE", "type": "University" }, "geometry": { "type": "Point", "coordinates": [ -79.605872027109996, 43.728202085158003 ] } },
+{ "type": "Feature", "properties": { "name": "UNIVERSITY OF TORONTO - SCARBOROUGH CAMPUS", "type": "University" }, "geometry": { "type": "Point", "coordinates": [ -79.186289481204199, 43.783886857494501 ] } },
+{ "type": "Feature", "properties": { "name": "UNIVERSITY OF TORONTO - ST GEORGE CAMPUS", "type": "University" }, "geometry": { "type": "Point", "coordinates": [ -79.396089510816907, 43.6609455296501 ] } },
+{ "type": "Feature", "properties": { "name": "YORK UNIVERSITY - GLENDON CAMPUS", "type": "University" }, "geometry": { "type": "Point", "coordinates": [ -79.378060300988494, 43.727167961147202 ] } },
+{ "type": "Feature", "properties": { "name": "YORK UNIVERSITY, KEELE CAMPUS", "type": "University" }, "geometry": { "type": "Point", "coordinates": [ -79.5023381683704, 43.773410089986399 ] } }
+]
+}

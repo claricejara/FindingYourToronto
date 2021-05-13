@@ -1,0 +1,99 @@
+/*https://coolors.co/ccd5ae-e9edc9-fefae0-faedcd-d4a373*/
+
+
+* {box-sizing: border-box}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+/*=======================
+  NavBar 
+=========================*/
+
+.sideNav {
+  float: left;
+  background-color: #EAD6A2;
+  width: 10%;
+  height: 100%;
+}
+
+.sideNav button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.sideNav button:hover {
+  background-color: #C5BB9A;
+  box-shadow: 2px 2px 7px grey;
+}
+
+/* Create an active/current "tab button" class */
+.sideNav button.active {
+  background-color: white;
+}
+
+/* navbar content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 20%;
+  border-left: none;
+  height: 100%;
+  display: none;
+}
+
+/*=======================
+  Instructions 
+=========================*/
+
+#instructions{
+  display: block;
+}
+
+
+/*=======================
+  Weights Interface 
+=========================*/
+label, button {
+  display: block;
+}
+
+
+/*=======================
+  Statistics 
+=========================*/
+#statistics, #instructions, #weightsInterface{
+  overflow: auto;
+}
+
+
+/*=======================
+  Map 
+=========================*/
+
+#mapid { 
+  height: 100%;
+  width: 70%;
+}
+
+.info{
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
