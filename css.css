@@ -1,99 +1,120 @@
-/*https://coolors.co/ccd5ae-e9edc9-fefae0-faedcd-d4a373*/
-
-
-* {box-sizing: border-box}
-
-html, body{
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body{
+  margin-top: 60px;
 }
 
 /*=======================
   NavBar 
 =========================*/
 
-.sideNav {
-  float: left;
-  background-color: #EAD6A2;
-  width: 10%;
-  height: 100%;
+.NavBar {
+  background-color: #ead6a2;
+  box-shadow: 2px 2px 7px grey;
+  text-align: center;
+  font-size: 0.6rem;
+  justify-content: center;
 }
 
-.sideNav button {
-  display: block;
+.NavBar button {
   background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
+  color: #757575;
   border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
+  padding: 5px 0px 5px 0px;
 }
 
 /* Change background color of buttons on hover */
-.sideNav button:hover {
-  background-color: #C5BB9A;
+.NavBar button:hover {
+  background-color: #c5bb9a;
   box-shadow: 2px 2px 7px grey;
 }
 
 /* Create an active/current "tab button" class */
-.sideNav button.active {
+.NavBar button.active {
   background-color: white;
 }
+
+.NavBar p{
+  padding-top: 5px;
+  margin: 0px;
+}
+
+.NavBar h1{
+  padding: 15px 0px 0px 20px;
+  margin: 0px;
+  text-align: left;
+  font-family: "Constantia";
+  font-style: italic;
+  font-size: 3vw;
+  color: #805932;
+  text-shadow: 1px 1px 0px #FEFAE0;
+}
+
 
 /* navbar content */
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 1px solid #ccc;
-  width: 20%;
-  border-left: none;
-  height: 100%;
-  display: none;
+  /* border: 1px solid #ccc; */
+  /* border-left: none; */
+  /* height: 100%; */
+  /* display: none; */
 }
 
 /*=======================
   Instructions 
 =========================*/
 
-#instructions{
-  display: block;
-}
-
+/* #instructions {
+   display: block; 
+} */
 
 /*=======================
   Weights Interface 
 =========================*/
-label, button {
-  display: block;
-}
-
+/* label,
+button {
+  display: block; 
+} */
 
 /*=======================
   Statistics 
 =========================*/
-#statistics, #instructions, #weightsInterface{
+/* #statistics,
+#instructions,
+#weightsInterface {
   overflow: auto;
-}
-
+} */
 
 /*=======================
   Map 
 =========================*/
 
-#mapid { 
-  height: 100%;
-  width: 70%;
+#mapid {
+  height: 90%;
 }
 
-.info{
+.info {
   padding: 6px 8px;
   font: 14px/16px Arial, Helvetica, sans-serif;
   background: white;
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+}
+
+/*=======================
+  Media Query
+=========================*/
+
+@media screen and (max-width: 768px) {
+  .tabcontent {
+    color: black;
+  }
 }

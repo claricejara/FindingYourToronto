@@ -1,7 +1,7 @@
 
 // ===== NAVBAR ======
 
-function openCity(evt, section) {
+function openTab(evt, section) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
