@@ -25,9 +25,9 @@ function openTab(evt, section) {
 // ===== MAP ======
 
 function getWeights(){
-  // declare global variable userWeights
+  
   // get the values user inputted weights and store it as a dict 
-  userWeights = {
+  var OGuserWeights = {
     newSubmit:document.getElementById("newSubmit").value, 
     crime:document.getElementById("crime").value, 
     price:document.getElementById("price").value,
@@ -40,10 +40,39 @@ function getWeights(){
     subway:document.getElementById("subway").value
   };
 
+  var maxWeights = weightsMax(OGuserWeights);
+  
+  // declare global variable userWeights
+  userWeights = {
+    newSubmit:OGuserWeights["newSubmit"],
+    crime: parseFloat(OGuserWeights["crime"]/maxWeights).toFixed(2),
+    price: parseFloat(OGuserWeights["price"]/maxWeights).toFixed(2),
+    popDensity: parseFloat(OGuserWeights["popDensity"]/maxWeights).toFixed(2),
+    attractions: parseFloat(OGuserWeights["attractions"]/maxWeights).toFixed(2),
+    schools: parseFloat(OGuserWeights["schools"]/maxWeights).toFixed(2),
+    postSec: parseFloat(OGuserWeights["postSec"]/maxWeights).toFixed(2),
+    healthService: parseFloat(OGuserWeights["healthService"]/maxWeights).toFixed(2),
+    religiousInsti: parseFloat(OGuserWeights["religiousInsti"]/maxWeights).toFixed(2),
+    subway: parseFloat(OGuserWeights["subway"]/maxWeights).toFixed(2),
+  };
+
   // call fieldCalculator and addNewLayer
   fieldCalculator();
   addNewLayer();
 }
+
+function weightsMax(OGuserWeights){
+  // calculate the sum of user inputted values on the sliders
+  var sum = 0;
+
+  for (var factor in OGuserWeights){
+    if(factor != "newSubmit"){
+      sum += parseInt(OGuserWeights[factor]);
+    }
+  }
+  return sum;
+}
+
 
 
 function fieldCalculator(){

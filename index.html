@@ -80,58 +80,52 @@
 	<body>
 
     	<!-- Instructions -->
-    	<div id="instructions" class="tabcontent row">
+    	<div id="instructions" class="tabcontent col-12">
 			<h1>Finding Your Toronto</h1>
     		<p>This is the what to do things/ instuctions.</p>
     	</div>
 
     	<!-- Weights Interface -->
-    	<div id="weightsInterface" class="tabcontent row">
+    	<div id="weightsInterface" class="tabcontent col-12">
     		<h1>Weights Interface</h1>
 
-    		<form>
+			<label for="newSubmit">Layer Name</label>
+			<input id="newSubmit" type="text"  placeholder="">
 
-    			<label for="newSubmit">Layer Name</label>
-	    		<input type="text" step="0.01" min="0" max="1" id="newSubmit" placeholder="">
+			<label for="crime">Low levels of crime</label>
+			<input id="crime" type="range" min="0" max="10" value="0">
 
-    			<!-- weights input interface -->
-				<label for="crime">Low levels of crime</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="crime" placeholder="">
+			<label for="price">Low average home price</label>
+			<input id="price" type="range" min="0" max="10" value="0">
 
-	    		<label for="price">Low average home price</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="price" placeholder="">
+			<label for="popDensity">Low population density</label>
+			<input id="popDensity" type="range" min="0" max="10" value="0">
 
-	    		<label for="popDensity">Low population density</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="popDensity" placeholder="">
+			<label for="attractions">Proximity to attractions</label>
+			<input id="attractions" type="range" min="0" max="10" value="0">
 
-	    		<label for="attractions">Proximity to attractions</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="attractions" placeholder="">
+			<label for="schools">Proximity to schools</label>
+			<input id="schools" type="range" min="0" max="10" value="0">
 
-	    		<label for="schools">Proximity to schools</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="schools" placeholder="">
+			<label for="postSec">Proximity to post-secondary institutions</label>
+			<input id="postSec" type="range" min="0" max="10" value="0">
 
-	    		<label for="postSec">Proximity to post-secondary institutions</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="postSec" placeholder="">
+			<label for="healthService">Proximity to health services</label>
+			<input id="healthService" type="range" min="0" max="10" value="0">
 
-				<label for="healthService">Proximity to health services</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="healthService" placeholder="">
+			<label for="religiousInsti">Proximity to religious institutions</label>
+			<input id="religiousInsti" type="range" min="0" max="10" value="0">
 
-	    		<label for="religiousInsti">Proximity to religious institutions</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="religiousInsti" placeholder="">
+			<label for="subway">Proximity to the subway</label>
+			<input id="subway" type="range" min="0" max="10" value="0">
 
-	    		<label for="subway">Proximity to the subway</label>
-	    		<input type="number" step="0.01" min="0" max="1" id="subway" placeholder="">
+			<!-- submit button  -->
+			<button id="btn" type="button" onclick="getWeights()">Submit</button>
 
-	    		
-	    		<!-- submit button -->
-	    		<button id="btn" type="button" onclick="getWeights()">Submit</button>
-
-    		</form>
-
-    	</div>
+		</div>
 
 		<!-- Map statistics -->
-    	<div id="statistics" class="tabcontent row">
+    	<div id="statistics" class="tabcontent col-12">
     		<h1>Statistics</h1>
     		<!-- Crime Chart -->
 			<canvas id="crimeStats" width="400" height="400"></canvas>
@@ -145,7 +139,7 @@
     	</div>
 
     	<!-- Where the map will be displayed -->
-    	<div id="mapid" class="container row col-12"></div>
+    	<div id="mapid" class="col-12"></div>
 
  		<!-- Include Custom JavaScript file -->
 		<script src="script.js"></script>
