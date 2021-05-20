@@ -87,37 +87,63 @@
 
     	<!-- Weights Interface -->
     	<div id="weightsInterface" class="tabcontent col-12">
-    		<h1>Weights Interface</h1>
+			<div class="row">
+				<input id="newSubmit" type="text" placeholder="New Layer Name">
+			</div>
 
-			<label for="newSubmit">Layer Name</label>
-			<input id="newSubmit" type="text"  placeholder="">
+			<div class="row">
+				<label for="crime">Low levels of crime:</label>
+				<span id="crimeVal" class="sliderValue">10</span>
+				<input id="crime" class="slider" type="range" min="0" max="10" value="0" >
+			</div>
 
-			<label for="crime">Low levels of crime</label>
-			<input id="crime" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="price">Low average home price:</label>
+				<span id="priceVal" class="sliderValue">10</span>
+				<input id="price" class="slider" type="range" min="0" max="10" value="0">				
+			</div>
 
-			<label for="price">Low average home price</label>
-			<input id="price" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="popDensity">Low population density:</label>
+				<span id="popVal" class="sliderValue">10</span>
+				<input id="popDensity" class="slider" type="range" min="0" max="10" value="0">
+			</div>
 
-			<label for="popDensity">Low population density</label>
-			<input id="popDensity" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="attractions">Proximity to attractions:</label>
+				<span id="attractionsVal" class="sliderValue">10</span>
+				<input id="attractions" class="slider" type="range" min="0" max="10" value="0">
+			</div>
 
-			<label for="attractions">Proximity to attractions</label>
-			<input id="attractions" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="schools">Proximity to schools:</label>
+				<span id="schoolsVal" class="sliderValue">10</span>
+				<input id="schools" class="slider" type="range" min="0" max="10" value="0">
+			</div>
 
-			<label for="schools">Proximity to schools</label>
-			<input id="schools" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="postSec">Proximity to post-secondary institutions:</label>
+				<span id="postSecVal" class="sliderValue">10</span>
+				<input id="postSec" class="slider" type="range" min="0" max="10" value="0">
+			</div>
 
-			<label for="postSec">Proximity to post-secondary institutions</label>
-			<input id="postSec" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="healthService">Proximity to health services:</label>
+				<span id="healthVal" class="sliderValue">10</span>
+				<input id="healthService" class="slider" type="range" min="0" max="10" value="0">
+			</div>
 
-			<label for="healthService">Proximity to health services</label>
-			<input id="healthService" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="religiousInsti">Proximity to religious institutions:</label>
+				<span id="religiousVal" class="sliderValue">10</span>
+				<input id="religiousInsti" class="slider" type="range" min="0" max="10" value="0">
+			</div>
 
-			<label for="religiousInsti">Proximity to religious institutions</label>
-			<input id="religiousInsti" type="range" min="0" max="10" value="0">
-
-			<label for="subway">Proximity to the subway</label>
-			<input id="subway" type="range" min="0" max="10" value="0">
+			<div class="row">
+				<label for="subway">Proximity to the subway:</label>
+				<span id="subwayVal" class="sliderValue">10</span>
+				<input id="subway" class="slider" type="range" min="0" max="10" value="0">
+			</div>
 
 			<!-- submit button  -->
 			<button id="btn" type="button" onclick="getWeights()">Submit</button>
@@ -125,16 +151,18 @@
 		</div>
 
 		<!-- Map statistics -->
-    	<div id="statistics" class="tabcontent col-12">
-    		<h1>Statistics</h1>
+    	<div id="statistics" class="tabcontent row">
+
     		<!-- Crime Chart -->
-			<canvas id="crimeStats" width="400" height="400"></canvas>
+			<div class="col-4"><canvas id="crimeStats" ></canvas></div>
+			
+			<!-- Age Chart -->
+			<div class="col-4"><canvas id="ageStats" class="col-4"></canvas></div>
 
 			<!-- Race Chart -->
-			<canvas id="raceStats" width="400" height="400"></canvas>
+			<div class="col-4"><canvas id="raceStats" class="col-4"></canvas></div>
 
-			<!-- Age Chart -->
-			<canvas id="ageStats" width="400" height="400"></canvas>
+			
     		
     	</div>
 

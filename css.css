@@ -3,7 +3,8 @@ body {
   height: 100%;
   width: 100%;
   margin: 0px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Helvetica';
+  font-size: 14px;
 }
 
 body{
@@ -20,6 +21,7 @@ body{
   text-align: center;
   font-size: 0.6rem;
   justify-content: center;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .NavBar button {
@@ -51,7 +53,7 @@ body{
   text-align: left;
   font-family: "Georgia";
   font-style: italic;
-  font-size: 3vw;
+  font-size: 16px;
   color: #805932;
   text-shadow: 1px 1px 0px #FEFAE0;
 }
@@ -60,10 +62,7 @@ body{
 /* navbar content */
 .tabcontent {
   float: left;
-  padding: 0px 12px;
-  /* border: 1px solid #ccc; */
-  /* border-left: none; */
-  /* height: 100%; */
+  padding: 0px 15px;
   display: none;
 }
 
@@ -78,19 +77,77 @@ body{
 /*=======================
   Weights Interface 
 =========================*/
-/* label,
-button {
-  display: block; 
-} */
+
+#newSubmit{
+  margin: 2px 0px 15px 15px;
+  width: 50%;
+  border: 0px;
+  outline: 0px;
+  border-bottom: 2px solid #ead6a2;
+}
+
+.slider{
+  -webkit-appearance: none;
+  border-radius: 6px;
+  height: 3px;
+  background: #e2e2e2;
+  width: 65%;
+  margin: 15px 0px 15px 30px;
+  padding: 0;
+  font-size: 12px;
+  color: #757575;
+  font-style: italic;
+}
+
+.slider::before{
+  content: "Not";
+  position: absolute;
+  padding-top: 5px;
+}
+
+.slider::after{
+  content: "Very";
+  position: absolute;
+  padding-top: 5px;
+  padding-left: 60%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  width: 12px; 
+  height: 12px;
+  background: #ead6a2;
+  border-radius: 50%;
+}
+
+.sliderValue{
+  /* display: inline-block;  */
+  position: relative;
+  width: 35px;
+  height: 25px;
+  color: black;
+  text-align: center;
+  padding: 1px 0 0 0;
+  margin: 10px 0 15px 40px;
+  background-color: #ead6a2;
+}
+
+#btn{
+  margin: 10px 0px 15px 80%;
+  background-color: #ead6a2;
+}
+
 
 /*=======================
   Statistics 
 =========================*/
-/* #statistics,
-#instructions,
-#weightsInterface {
-  overflow: auto;
-} */
+
+canvas{
+  /* width: 100px !important;
+  height: 100px !important; */
+  margin-top: 200px;
+  z-index: -1000;
+}
 
 /*=======================
   Map 

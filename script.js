@@ -22,6 +22,99 @@ function openTab(evt, section) {
   evt.currentTarget.className += " active";
 }
 
+// ===== WEIGHTS INTERFACE ======
+
+// crime slider
+var crime = document.getElementById('crime');
+var crimeVal = document.getElementById('crimeVal');
+
+crimeVal.innerHTML = crime.value;
+
+crime.oninput = function() {
+  crimeVal.innerHTML = this.value;
+}
+
+// price slider
+var price = document.getElementById('price');
+var priceVal = document.getElementById('priceVal');
+
+priceVal.innerHTML = price.value;
+
+price.oninput = function() {
+  priceVal.innerHTML = this.value;
+}
+
+// population density slider
+var popDensity = document.getElementById('popDensity');
+var popVal = document.getElementById('popVal');
+
+popVal.innerHTML = popDensity.value;
+
+popDensity.oninput = function() {
+  popVal.innerHTML = this.value;
+}
+
+//attractions slider
+var attractions = document.getElementById('attractions');
+var attractionsVal = document.getElementById('attractionsVal');
+
+attractionsVal.innerHTML = attractions.value;
+
+attractions.oninput = function() {
+  attractionsVal.innerHTML = this.value;
+}
+
+//schools slider
+var schools = document.getElementById('schools');
+var schoolsVal = document.getElementById('schoolsVal');
+
+schoolsVal.innerHTML = schools.value;
+
+schools.oninput = function() {
+  schoolsVal.innerHTML = this.value;
+}
+
+//postSec slider
+var postSec = document.getElementById('postSec');
+var postSecVal = document.getElementById('postSecVal');
+
+postSecVal.innerHTML = postSec.value;
+
+postSec.oninput = function() {
+  postSecVal.innerHTML = this.value;
+}
+
+//healthService slider
+var healthService = document.getElementById('healthService');
+var healthVal = document.getElementById('healthVal');
+
+healthVal.innerHTML = healthService.value;
+
+healthService.oninput = function() {
+  healthVal.innerHTML = this.value;
+}
+
+//religiousInsti slider
+var religiousInsti = document.getElementById('religiousInsti');
+var religiousVal = document.getElementById('religiousVal');
+
+religiousVal.innerHTML = religiousInsti.value;
+
+religiousInsti.oninput = function() {
+  religiousVal.innerHTML = this.value;
+}
+
+//subway slider
+var subway = document.getElementById('subway');
+var subwaysVal = document.getElementById('subwayVal');
+
+subwayVal.innerHTML = subway.value;
+
+subway.oninput = function() {
+  subwayVal.innerHTML = this.value;
+}
+
+
 // ===== MAP ======
 
 function getWeights(){
@@ -244,6 +337,27 @@ crimeChart = new Chart(crimeStats, {
       },
   });
 
+// Age Charts
+ageStats = document.getElementById('ageStats').getContext('2d'); 
+
+ageChart = new Chart(ageStats, {
+      type: 'doughnut',
+      data: {
+          labels: ["Children (0-14 years)",
+                    "Youth (15-24 years)",
+                    "Working Age (25-54 years)",
+                    "Pre-retirement (55-64 years)",
+                    "Seniors (65+ years)"],
+          datasets: [
+            {
+              label: 'Age Data',
+              data: ageData,
+              borderWidth: 1
+            }
+          ]
+      },
+  });
+
 // Race Charts
 raceStats = document.getElementById('raceStats').getContext('2d'); 
 
@@ -266,25 +380,5 @@ raceChart = new Chart(raceStats, {
   });
 
 
-// Age Charts
-ageStats = document.getElementById('ageStats').getContext('2d'); 
-
-ageChart = new Chart(ageStats, {
-      type: 'doughnut',
-      data: {
-          labels: ["Children (0-14 years)",
-                    "Youth (15-24 years)",
-                    "Working Age (25-54 years)",
-                    "Pre-retirement (55-64 years)",
-                    "Seniors (65+ years)"],
-          datasets: [
-            {
-              label: 'Age Data',
-              data: ageData,
-              borderWidth: 1
-            }
-          ]
-      },
-  });
 
 }
