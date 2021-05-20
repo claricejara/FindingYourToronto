@@ -326,7 +326,7 @@ crimeStats = document.getElementById('crimeStats').getContext('2d');
 crimeChart = new Chart(crimeStats, {
   type: 'doughnut',
   data: {
-      labels: ["Assult","Auto Theft","Break and Entry","Robbery","Homicide","Shootings"],
+      labels: ["Assult","Auto Theft","Break & Entry","Robbery","Homicide","Shootings"],
       datasets: [{
           label: 'Crime Data',
           data: crimeData,
@@ -340,19 +340,23 @@ crimeChart = new Chart(crimeStats, {
     responsive: true,
     plugins: {
       legend: {
-          display: true,
-          position: 'right'  
+        display: true,
+        position: 'right',
+        padding: {
+          top: 0,
+          bottom: 0
+        }   
+      },
+      title: {
+        display: true,
+        text: 'Rates of Crime',
+        align: 'start',
+        padding: {
+          top: 0,
+          bottom: 0
+        }
       }
     }      
-  },
-  title: {
-    display: true,
-    text: 'Rates of Crime',
-    align: 'start',
-    padding: {
-      top: 0,
-      bottom: 0
-    }
   }
 });
 
@@ -362,11 +366,11 @@ ageStats = document.getElementById('ageStats').getContext('2d');
 ageChart = new Chart(ageStats, {
   type: 'doughnut',
   data: {
-      labels: ["Children (0-14 years)",
-                "Youth (15-24 years)",
-                "Working Age (25-54 years)",
-                "Pre-retirement (55-64 years)",
-                "Seniors (65+ years)"],
+      labels: ["0-14 years",
+                "15-24 years",
+                "25-54 years",
+                "55-64 years",
+                "65+ years"],
       datasets: [
         {
           label: 'Age Data',
@@ -382,18 +386,22 @@ ageChart = new Chart(ageStats, {
     plugins: {
       legend: {
           display: true,
-          position: 'right'  
+          position: 'right',
+          padding: {
+            top: 0,
+            bottom: 0
+          }   
+      },
+      title: {
+        display: true,
+        text: 'Age Composition',
+        align: 'start',
+        padding: {
+          top: 0,
+          bottom: 0
+        }
       }
     }      
-  },
-  title: {
-    display: true,
-    text: 'Age',
-    align: 'start',
-    padding: {
-      top: 0,
-      bottom: 0
-    }
   }
 });
 
@@ -403,10 +411,10 @@ raceStats = document.getElementById('raceStats').getContext('2d');
 raceChart = new Chart(raceStats, {
   type: 'doughnut',
   data: {
-      labels: ["North American Aboriginal",
-                "Other North American",
+      labels: ["Aboriginal",
+                "North American",
                 "European",
-                "Latin, Central and South American",
+                "Central & South American",
                 "African","Asian","Oceania"],
       datasets: [
         {
@@ -441,7 +449,6 @@ raceChart = new Chart(raceStats, {
     }      
   }
 });
-
 
 
 }
