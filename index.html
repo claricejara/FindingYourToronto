@@ -154,16 +154,20 @@
     	<div id="statistics" class="tabcontent row">
 
     		<!-- Crime Chart -->
-			<div class="col-4"><canvas id="crimeStats" ></canvas></div>
+			<div class="charts col-4">
+				<canvas id="crimeStats"></canvas>
+			</div>
 			
 			<!-- Age Chart -->
-			<div class="col-4"><canvas id="ageStats" class="col-4"></canvas></div>
+			<div class="charts col-4">
+				<canvas id="ageStats"></canvas>
+			</div>
 
 			<!-- Race Chart -->
-			<div class="col-4"><canvas id="raceStats" class="col-4"></canvas></div>
+			<div class="charts col-4">
+				<canvas id="raceStats"></canvas>
+			</div>
 
-			
-    		
     	</div>
 
     	<!-- Where the map will be displayed -->
@@ -262,7 +266,7 @@
 		    this._div.innerHTML = (props ?
 				"<b>" + props.hoodName + " </b><br>" +
 				"<i> Suitability: </i>" + props.FinalRecla + "%<br>" +
-				"<i> Levels of Crime Ranking: </i>" + props.crimeRank + "<br>" +
+				"<i> Low Crime Rate Ranking: </i>" + props.crimeRank + "<br>" +
 				"<i> Average Home Price: $</i>" + props.avgPrice + "<br>" +
 				"<i> Population Density: </i>" + props.popDensity + " people / km<sup>2</sup>"
 				: "");

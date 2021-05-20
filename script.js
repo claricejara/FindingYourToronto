@@ -324,60 +324,123 @@ function makecharts() {
 crimeStats = document.getElementById('crimeStats').getContext('2d'); 
 
 crimeChart = new Chart(crimeStats, {
-      type: 'doughnut',
-      data: {
-          labels: ["Assult","Auto Theft","Break and Entry","Robbery","Homicide","Shootings"],
-          datasets: [
-            {
-              label: 'Crime Data',
-              data: crimeData,
-              borderWidth: 1
-            }
-          ]
-      },
-  });
+  type: 'doughnut',
+  data: {
+      labels: ["Assult","Auto Theft","Break and Entry","Robbery","Homicide","Shootings"],
+      datasets: [{
+          label: 'Crime Data',
+          data: crimeData,
+          borderWidth: 1,
+          hoverOffset: 5,
+          backgroundColor:['#c5bb9a', '#b1a88a', '#9d957b', '#89826b', '#76705c', '#625d4d'],
+          borderColor: '#ffffff'
+        }]
+  },
+  options:{
+    responsive: true,
+    plugins: {
+      legend: {
+          display: true,
+          position: 'right'  
+      }
+    }      
+  },
+  title: {
+    display: true,
+    text: 'Rates of Crime',
+    align: 'start',
+    padding: {
+      top: 0,
+      bottom: 0
+    }
+  }
+});
 
 // Age Charts
 ageStats = document.getElementById('ageStats').getContext('2d'); 
 
 ageChart = new Chart(ageStats, {
-      type: 'doughnut',
-      data: {
-          labels: ["Children (0-14 years)",
-                    "Youth (15-24 years)",
-                    "Working Age (25-54 years)",
-                    "Pre-retirement (55-64 years)",
-                    "Seniors (65+ years)"],
-          datasets: [
-            {
-              label: 'Age Data',
-              data: ageData,
-              borderWidth: 1
-            }
-          ]
-      },
-  });
+  type: 'doughnut',
+  data: {
+      labels: ["Children (0-14 years)",
+                "Youth (15-24 years)",
+                "Working Age (25-54 years)",
+                "Pre-retirement (55-64 years)",
+                "Seniors (65+ years)"],
+      datasets: [
+        {
+          label: 'Age Data',
+          data: ageData,
+          borderWidth: 1,
+          hoverOffset: 5,
+          backgroundColor:['#c19c43', '#c7aa65', '#dbbea0', '#d2a06f', '#ccc079'],
+          borderColor: '#ffffff'
+        }] 
+  },
+  options:{
+    responsive: true,
+    plugins: {
+      legend: {
+          display: true,
+          position: 'right'  
+      }
+    }      
+  },
+  title: {
+    display: true,
+    text: 'Age',
+    align: 'start',
+    padding: {
+      top: 0,
+      bottom: 0
+    }
+  }
+});
 
 // Race Charts
 raceStats = document.getElementById('raceStats').getContext('2d'); 
 
 raceChart = new Chart(raceStats, {
-      type: 'doughnut',
-      data: {
-          labels: ["North American Aboriginal",
-                    "Other North American",
-                    "European ",
-                    "Latin; Central and South American",
-                    "African","Asian","Oceania"],
-          datasets: [
-            {
-              label: 'Ethnic Origins',
-              data: raceData,
-              borderWidth: 1
-            }
-          ]
+  type: 'doughnut',
+  data: {
+      labels: ["North American Aboriginal",
+                "Other North American",
+                "European",
+                "Latin, Central and South American",
+                "African","Asian","Oceania"],
+      datasets: [
+        {
+          label: 'Ethnic Origins',
+          data: raceData,
+          borderWidth: 1,
+          hoverOffset: 5,
+          backgroundColor:['#9eb89b', '#b7cca9', '#d4e1ca', '#d1dbb7', '#c6d2a5', '#c9d8c8', '#95A48A'],
+          borderColor: '#ffffff'
+        }]
+  },
+  options:{
+    responsive: true,
+    plugins: {
+      legend: {
+          display: true,
+          position: 'right',
+          padding: {
+            top: 0,
+            bottom: 0
+          } 
       },
-  });
+      title: {
+        display: true,
+        text: 'Ethnic Origin Composition',
+        align: 'start',
+        padding: {
+          top: 0,
+          bottom: 0
+        }
+      }
+    }      
+  }
+});
 
 
 
