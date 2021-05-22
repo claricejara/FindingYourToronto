@@ -207,14 +207,12 @@ function addNewLayer(){
  
 function getColor(d) {
   // assign colours based on values
-  // less than 50 = 50% suitability
+  // less than or equal to 69 = 69% suitability
   // more than 90 = 90+% suitability
-  return d <= 50 ? '#ffffff' :
-         d > 50 && d <= 60 ? '#ff0000' :
-         d > 60 && d <= 70 ? '#ff4000' :
-         d > 70 && d <= 80 ? '#ff8000' :
-         d > 80 && d <= 90 ? '#ffbf00' :
-                     '#ffff00';
+  return d <= 69 ? '#FFFFFF' :
+         d >= 70 && d <= 80 ? '#b2d8b2' :
+         d > 80 && d <= 90 ? '#66b266' :
+                     '#198c19';
 }
 
 function mapStyle(feature) {
@@ -256,8 +254,7 @@ function resetHighlight(e) {
   layer.setStyle({
       weight: 2,
       opacity: 1,
-      color: '#adadad',
-      fillOpacity: 0.1
+      color: '#adadad'
   });
   
   info.update();
