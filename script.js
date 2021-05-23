@@ -117,6 +117,25 @@ subway.oninput = function() {
 
 // ===== MAP ======
 
+//add legend
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+
+  var div = L.DomUtil.create('div', 'info legend'),
+    grades = [0, 50, 60, 70, 80, 90],
+    labels = [];
+
+  for (var i = 0; i < grades.length; i++) {
+    div.innerHTML +=
+      '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+      grades[i] + (grades[i + 1] ? ' &ndash; ' + ((grades[i + 1]) -1) + '<br>' : '+');
+  }
+  
+  return div;
+};
+
+
 function getWeights(){
   
   // get the values user inputted weights and store it as a dict 
@@ -201,7 +220,7 @@ function addNewLayer(){
 							onEachFeature: onEachFeature});
 	
 	// add new layer to submittedLayers
-	addLadgend.addBaseLayer(newL, userWeights["newSubmit"]);
+	addLagend.addBaseLayer(newL, userWeights["newSubmit"]);
 }
 
  
@@ -209,10 +228,12 @@ function getColor(d) {
   // assign colours based on values
   // less than or equal to 69 = 69% suitability
   // more than 90 = 90+% suitability
-  return d <= 69 ? '#FFFFFF' :
-         d >= 70 && d <= 80 ? '#b2d8b2' :
-         d > 80 && d <= 90 ? '#66b266' :
-                     '#198c19';
+  return d < 50 ? '#FFFFFF' :
+    d >= 50 && d < 60 ? '#e8e4db' :
+    d >= 60 && d < 70 ? '#d9c7b1' :
+    d >= 70 && d < 80 ? '#85837a' :
+    d >= 80 && d < 90 ? '#6e917a' :
+                        '#196633';
 }
 
 function mapStyle(feature) {
@@ -223,7 +244,7 @@ function mapStyle(feature) {
     weight: 2,
     opacity: 1,
     color: '#adadad',
-    fillOpacity: 0.3
+    fillOpacity: 0.4
   };
 }
 

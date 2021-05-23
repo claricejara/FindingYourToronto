@@ -187,6 +187,22 @@ canvas{
   border-radius: 5px;
 }
 
+.legend {
+  line-height: 18px;
+  color: rgb(0, 0, 0);
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  border:rgba(0, 0, 0, 0.2); 
+  border-width:1px; 
+  border-style:solid;
+  opacity: 0.4
+}
+
 /*=======================
   Media Query
 =========================*/

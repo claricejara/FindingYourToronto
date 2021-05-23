@@ -243,16 +243,18 @@
 		    "Subway": subway,
 		};
 
-		// add Layers/ledgend
-		var addLadgend = L.control.layers(submittedLayers,overlayMaps)
-		addLadgend.addTo(mymap);
+		// add Layers/legend
+		legend.addTo(mymap);
+
+		var addLagend = L.control.layers(submittedLayers,overlayMaps)
+		addLagend.addTo(mymap);
 
 		var crimeChart;
 		var raceChart;
 		var ageChart;
 
 		// display neighbourhood info
-		var info = L.control({position: 'bottomright'});
+		var info = L.control({position: 'bottomleft'});
 
 		// create a div with a class "info"
 		info.onAdd = function (mymap) {
