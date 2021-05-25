@@ -1,14 +1,30 @@
-html,
-body {
+html, body{
   height: 100%;
   width: 100%;
-  margin: 0px;
   font-family: 'Helvetica';
   font-size: 14px;
 }
 
 body{
   margin-top: 60px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#ead6a2;
+}
+
+footer p{
+  text-align: end;
+  font-size: 10px;
+  color: #757575;
+  padding: 5px 10px;
+  margin: 0;
 }
 
 /*=======================
@@ -49,7 +65,7 @@ body{
 
 .NavBar h1{
   padding: 15px 0px 0px 20px;
-  margin: 0px;
+  margin: 0px  !important;
   text-align: left;
   font-family: "Georgia";
   font-style: italic;
@@ -69,10 +85,9 @@ body{
 /*=======================
   Instructions 
 =========================*/
-
-/* #instructions {
-   display: block; 
-} */
+#instructions{
+  display: block;
+}
 
 /*=======================
   Weights Interface 
@@ -180,7 +195,7 @@ canvas{
 
 .info {
   padding: 6px 8px;
-  font: 14px/16px Arial, Helvetica, sans-serif;
+  font: 12px Arial, Helvetica, sans-serif;
   background: white;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -207,8 +222,93 @@ canvas{
   Media Query
 =========================*/
 
-@media screen and (max-width: 768px) {
-  .tabcontent {
-    color: black;
+@media screen and (min-width: 768px) {
+  
+  body{
+    margin: 50px 0px 0px 0px;
+    box-sizing: border-box;
+    padding: 0;
+    z-index: 1;
   }
+
+  footer{
+    position: relative;
+    border: 2px solid rgb(43, 255, 0);
+    z-index: 1;
+  }
+
+  .NavBar h1{
+    font-size: 20px;
+    padding: 15px 0px 10px 30px;
+  }
+
+  .tabcontent{
+    border: 5px solid rgba(252, 185, 1, 0.774);
+    height: 100%;
+    z-index: 1;
+  }
+
+  #instructions{
+    padding: 25px 20px 0px 20px;
+    height: 100%;
+    overflow: auto;
+    /* border: 2px solid red; */
+    z-index: 1;
+  }
+
+  #weightsInterface{
+    height: 100%;
+    overflow: auto;
+    border: 2px solid rgb(255, 0, 140);
+    padding: 25px 20px 0px 20px;
+    z-index: 1;
+  }
+
+  #newSubmit{
+    width: 90%;
+  }
+
+  /* .slider{
+    width: 80%;
+    margin: 15px 0px 15px 30px;
+    padding: 0;
+    font-size: 12px;
+    color: #757575;
+    font-style: italic;
+  } */
+
+  /* .slider::before, .slider::after{
+    position: relative;
+    padding-top: 0px; 
+    background: #ffffff;
+  }
+
+  .slider::before{
+    content: "Not";
+  }
+
+  .slider::after{
+    content: "Very";
+    padding-left: 0%;
+  } */
+
+
+  #mapid{
+    height: 100%;
+    border: 2px solid rgb(55, 0, 255);
+    z-index: 1;
+  }
+
+  /* #statistics{
+    height: 100vh;
+    overflow: auto;
+    border: 2px solid rgb(43, 255, 0);
+  }  */
+
+  
+
+  
+
+
+  
 }

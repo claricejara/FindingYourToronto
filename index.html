@@ -46,6 +46,7 @@
     </head>
 
 	<header>
+
     	<!-- NavBar -->
     	<div class="NavBar row fixed-top text-center">
 
@@ -75,18 +76,49 @@
 			</button>
 
     	</div>
-	</header>
 	
+	</header>
+
 	<body>
 
-    	<!-- Instructions -->
-    	<div id="instructions" class="tabcontent col-12">
-			<h1>Finding Your Toronto</h1>
-    		<p>This is the what to do things/ instructions.</p>
-    	</div>
+		<!-- Instructions  -->
+		<div id="instructions" class="tabcontent col-12 col-md-4">
+			<p>
+				<i><b>Welcome to Finding Your Toronto!</b></i> This is a tool designed to help people in 
+				deciding the ideal neighbourhood for them to live in based on 
+				socioeconomic, cultural, and spatio-temporal dimensions. It automates 
+				the process of site suitability analysis, ranking neighbourhoods 
+				in Toronto using trusted data from the official 
+				<a href="https://open.toronto.ca/">City of Toronto Open Data Portal</a>
+				. To find your Toronto, follow the steps below:
+			</p>
+
+			<ol>
+				<li>
+					In the weights tab, input a new layer name in order to add the 
+					generated map to the legend below
+				</li>
+				<li>
+					Use the sliders to input the level of importance each factor
+					holds in your ideal neighbourhood search
+				</li>
+				<li>
+					Click submit, and select your new layer from the legend to see 
+					the generated map
+				</li>
+				<li>
+					Hover and click on a neighbourhood to see its data, 
+					for more information open the statistics tab
+				</li>
+				<li>
+					Repeat until you find your ideal Toronto neighbourhood
+				</li>
+			</ol>
+		</div>
+
 
     	<!-- Weights Interface -->
-    	<div id="weightsInterface" class="tabcontent col-12">
+    	<div id="weightsInterface" class="tabcontent col-12 col-md-4">
 			<div class="row">
 				<input id="newSubmit" type="text" placeholder="New Layer Name">
 			</div>
@@ -151,27 +183,27 @@
 		</div>
 
 		<!-- Map statistics -->
-    	<div id="statistics" class="tabcontent row">
+    	<div id="statistics" class="tabcontent col-md-4">
 
     		<!-- Crime Chart -->
-			<div class="charts col-4">
+			<div class="charts">
 				<canvas id="crimeStats"></canvas>
 			</div>
 			
 			<!-- Age Chart -->
-			<div class="charts col-4">
+			<div class="charts">
 				<canvas id="ageStats"></canvas>
 			</div>
 
 			<!-- Race Chart -->
-			<div class="charts col-4">
+			<div class="charts">
 				<canvas id="raceStats"></canvas>
 			</div>
 
     	</div>
 
     	<!-- Where the map will be displayed -->
-    	<div id="mapid" class="col-12"></div>
+    	<div id="mapid" class="col-12 col-md-8 m-0"></div>
 
  		<!-- Include Custom JavaScript file -->
 		<script src="script.js"></script>
@@ -277,7 +309,10 @@
 		info.addTo(mymap);
 
  		</script>
+	</body>
 
+	<footer>
+		<p> Copyright &#169; 2021 Clarice Jara</p>
+	</footer>
 
-   </body>
 </html>   	 
