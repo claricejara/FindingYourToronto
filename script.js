@@ -220,7 +220,7 @@ function addNewLayer(){
 							onEachFeature: onEachFeature});
 	
 	// add new layer to submittedLayers
-	addLagend.addBaseLayer(newL, userWeights["newSubmit"]);
+	addLegend.addBaseLayer(newL, userWeights["newSubmit"]);
 }
 
  
@@ -359,7 +359,7 @@ crimeChart = new Chart(crimeStats, {
     plugins: {
       legend: {
         display: true,
-        position: 'right',
+        position: 'top',
         padding: {
           top: 0,
           bottom: 0
@@ -404,7 +404,7 @@ ageChart = new Chart(ageStats, {
     plugins: {
       legend: {
           display: true,
-          position: 'right',
+          position: 'top',
           padding: {
             top: 0,
             bottom: 0
@@ -449,7 +449,7 @@ raceChart = new Chart(raceStats, {
     plugins: {
       legend: {
           display: true,
-          position: 'right',
+          position: 'top',
           padding: {
             top: 0,
             bottom: 0

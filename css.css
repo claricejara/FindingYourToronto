@@ -106,6 +106,10 @@ a {
   border-bottom: 2px solid #ead6a2;
 }
 
+label{
+  font-weight: bold;
+}
+
 .slider{
   -webkit-appearance: none;
   border-radius: 6px;
@@ -117,19 +121,20 @@ a {
   font-size: 12px;
   color: #757575;
   font-style: italic;
+  position: relative;
 }
 
 .slider::before{
-  content: "Not Important";
+  content: "N/A";
   position: absolute;
   padding-top: 5px;
 }
 
 .slider::after{
-  content: "Very Important";
+  content: "Important";
   position: absolute;
   padding-top: 5px;
-  padding-left: 50%;
+  right: 0;
 }
 
 .slider::-webkit-slider-thumb {
@@ -182,10 +187,11 @@ a {
 canvas{
   padding: 0;
   margin: 0;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   display: none;
   box-sizing: none;
+  display: block;
 }
 
 /*=======================
@@ -226,9 +232,11 @@ canvas{
   Media Query
 =========================*/
 
-@media (min-width: 992px) {
+/* for larger screens */
+@media (min-width: 768px) {
   
   body{
+    height: 100vh;
     margin: 50px 0px 0px 0px;
     box-sizing: border-box;
     padding: 0;
@@ -247,7 +255,6 @@ canvas{
 
   .tabcontent{
     height: 100%;
-    /* width: 100%; */
     z-index: 1;
   }
 
@@ -270,13 +277,8 @@ canvas{
   }
 
   .slider{
-    position: relative;
-  } 
-
-  .slider::after{
-    padding-left: 65%;
-    text-align: end;
-  }  
+    margin-bottom: 50px;
+  }
 
   #mapid{
     height: 100%;
