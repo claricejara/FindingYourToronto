@@ -196,7 +196,7 @@ function fieldCalculator(){
                       (5*userWeights["subway"])
                         
   // update the value of each neighbourhood in the FinalRecla col of tableData
-  // with the corrosponding reclass value * weight given by the user
+  // with the corresponding reclass value * weight given by the user
 	for (var i = 0; i < tableData.features.length; i++) {
 		tableData.features[i].properties.FinalRecla = ((
     (tableData.features[i].properties.reCrime * userWeights["crime"]) +
@@ -344,7 +344,7 @@ crimeStats = document.getElementById('crimeStats').getContext('2d');
 crimeChart = new Chart(crimeStats, {
   type: 'doughnut',
   data: {
-      labels: ["Assult","Auto Theft","Break & Entry","Robbery","Homicide","Shootings"],
+      labels: ["Assault","Auto Theft","Break & Entry","Robbery","Homicide","Shootings"],
       datasets: [{
           label: 'Crime Data',
           data: crimeData,
@@ -359,7 +359,7 @@ crimeChart = new Chart(crimeStats, {
     plugins: {
       legend: {
         display: true,
-        position: 'top',
+        position: 'right',
         padding: {
           top: 0,
           bottom: 0
@@ -404,7 +404,7 @@ ageChart = new Chart(ageStats, {
     plugins: {
       legend: {
           display: true,
-          position: 'top',
+          position: 'right',
           padding: {
             top: 0,
             bottom: 0
@@ -449,7 +449,7 @@ raceChart = new Chart(raceStats, {
     plugins: {
       legend: {
           display: true,
-          position: 'top',
+          position: 'right',
           padding: {
             top: 0,
             bottom: 0
